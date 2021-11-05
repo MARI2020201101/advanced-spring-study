@@ -8,11 +8,9 @@ import java.util.UUID;
 public class StackStatus {
 
     private String id;
-    private Integer indent;
 
     public StackStatus(){
         id=UUID.randomUUID().toString().substring(0,8);
-        indent=0;
     }
 
 }
