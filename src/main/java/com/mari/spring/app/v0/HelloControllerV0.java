@@ -1,18 +1,17 @@
-package com.mari.spring.app;
+package com.mari.spring.app.v0;
 
 import lombok.RequiredArgsConstructor;
-import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RestController;
 
 @RestController
 @RequiredArgsConstructor
-public class HelloController {
+public class HelloControllerV0 {
 
-    private final HelloService helloService;
+    private final HelloServiceV0 helloServiceV0;
 
     @GetMapping("/hello")
     public String getHello(String message){
-        return helloService.getHello(message);
+        return helloServiceV0.getHello(message);
     }
 }
