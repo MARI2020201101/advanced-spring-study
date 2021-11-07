@@ -8,7 +8,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.context.SpringBootTest;
 
 @SpringBootTest
-public class StackLogV1Test {
+public class StackLogV2Test {
 
     @Autowired
     StackLogServiceV1 stackLogServiceV1;
