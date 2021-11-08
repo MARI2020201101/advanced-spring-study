@@ -1,10 +1,5 @@
 package com.mari.spring.log;
 
-import com.mari.spring.app.v0.HelloServiceV0;
-import com.mari.spring.app.v1.HelloRepositoryV1;
-import com.mari.spring.app.v1.HelloServiceV1;
-import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.boot.test.context.SpringBootTest;
 import org.springframework.scheduling.concurrent.ThreadPoolTaskExecutor;
 
 import java.util.concurrent.atomic.AtomicInteger;
