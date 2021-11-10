@@ -5,10 +5,10 @@ import org.springframework.stereotype.Component;
 @Component
 public class TraceLogImplV3 implements TraceLog{
 
-    private static ThreadLocal<StackStatusV2> stackIdHolder;
+    private static ThreadLocal<StackStatusV2> stackIdHolder = new ThreadLocal<>();
 
     private StackStatusV2 getStackIdHolder(){
-        if(stackIdHolder==null){
+        if(stackIdHolder.get()==null){
             stackIdHolder.set(new StackStatusV2());
         }return stackIdHolder.get();
     }
