@@ -1,13 +1,16 @@
 package com.mari.spring.tracelog;
 
-public class TraceLogImplV2 implements TraceLog{
+import org.springframework.stereotype.Component;
 
-    private static StackStatusV2 stackIdHolder;
+@Component
+public class TraceLogImplV3 implements TraceLog{
+
+    private static ThreadLocal<StackStatusV2> stackIdHolder = new ThreadLocal<>();
 
     private StackStatusV2 getStackIdHolder(){
-        if(stackIdHolder==null){
-            stackIdHolder = new StackStatusV2();
-        }return stackIdHolder;
+        if(stackIdHolder.get()==null){
+            stackIdHolder.set(new StackStatusV2());
+        }return stackIdHolder.get();
     }
 
     @Override
@@ -21,12 +24,12 @@ public class TraceLogImplV2 implements TraceLog{
     @Override
     public void end(StackLogV2 stackLog) {
         stackLog.end(stackLog);
-        stackIdHolder=null;
+        stackIdHolder.remove();
     }
 
     @Override
     public void exception(StackLogV2 stackLog, Exception e) {
         stackLog.exception(stackLog,e);
-        stackIdHolder=null;
+        stackIdHolder.remove();
     }
 }
