@@ -2,9 +2,10 @@ package com.mari.spring.tracelog;
 
 import org.springframework.stereotype.Component;
 
+@Component
+public class TraceLogImplV4 implements TraceLog{
 
-public class TraceLogImplV2 implements TraceLog{
-
+//    private static StackStatusV2 stackIdHolder;
     private static StackStatusV2 stackIdHolder;
 
     private StackStatusV2 getStackIdHolder(){
