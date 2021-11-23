@@ -2,7 +2,7 @@ package com.mari.spring.tracelog;
 
 import org.springframework.stereotype.Component;
 
-@Component
+
 public class TraceLogImplV4 implements TraceLog{
 
 //    private static StackStatusV2 stackIdHolder;

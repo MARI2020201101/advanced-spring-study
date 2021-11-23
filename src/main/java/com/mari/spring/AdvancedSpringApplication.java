@@ -7,11 +7,13 @@ import org.springframework.boot.ApplicationRunner;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.context.annotation.Bean;
+import org.springframework.context.annotation.EnableAspectJAutoProxy;
 import org.springframework.scheduling.concurrent.ThreadPoolTaskExecutor;
 
 import java.util.concurrent.atomic.AtomicInteger;
 
 @SpringBootApplication
+//@EnableAspectJAutoProxy //boot는 자동설정..
 public class AdvancedSpringApplication {
 	@Autowired
 	HelloServiceV1 helloService;
