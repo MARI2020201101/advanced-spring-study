@@ -4,6 +4,7 @@ import com.mari.spring.app.v2.HelloService;
 import com.mari.spring.app.v2.HelloServiceV2;
 import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.Test;
+import org.springframework.aop.framework.Advised;
 import org.springframework.aop.support.AopUtils;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.context.SpringBootTest;
