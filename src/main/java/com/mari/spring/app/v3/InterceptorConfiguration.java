@@ -1,9 +1,13 @@
 package com.mari.spring.app.v3;
 
+import lombok.extern.slf4j.Slf4j;
+import org.springframework.aop.support.AopUtils;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.cglib.proxy.Enhancer;
 
 @SpringBootApplication
+@Slf4j
 public class InterceptorConfiguration {
 
     public static void main(String[] args) {
